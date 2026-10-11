@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Finder | Smart Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <div class="logo">🌦️ Weather Finder</div>
+            <button id="locationBtn" class="location-btn">
+                📍 My Location
+            </button>
+        </header>
+
+        <section class="search-section">
+            <h1>Discover Your Weather</h1>
+            <p>Real-time weather and smart insights for your city.</p>
+
+            <form id="searchForm">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+
+            <p id="status" role="status">Search for a city to begin.</p>
+        </section>
+
+        <section class="weather-card">
+            <div>
+                <p id="cityName">Your City</p>
+                <p id="currentDate">Current weather</p>
+
+                <h2><span id="temperature">--</span>°C</h2>
+                <h3 id="condition">Search for a city</h3>
+
+                <p class="feels">
+                    Feels like <span id="feelsLike">--</span>°C
+                </p>
+            </div>
+
+            <div class="weather-icon" id="weatherIcon">🌤️</div>
+        </section>
+
+        <h2 class="section-title">Weather Details</h2>
+
+        <section class="details-grid">
+            <div class="detail-card">
+                <span>💧 Humidity</span>
+                <h3 id="humidity">--%</h3>
+            </div>
+
+            <div class="detail-card">
+                <span>💨 Wind Speed</span>
+                <h3 id="wind">-- km/h</h3>
+            </div>
+
+            <div class="detail-card">
+                <span>🌡️ Pressure</span>
+                <h3 id="pressure">-- hPa</h3>
+            </div>
+
+            <div class="detail-card">
+                <span>☀️ UV Index</span>
+                <h3 id="uv">--</h3>
+            </div>
+        </section>
+
+        <h2 class="section-title">5-Day Forecast</h2>
+
+        <section id="forecast" class="forecast-grid">
+            <p class="muted">Your forecast will appear here.</p>
+        </section>
+
+        <h2 class="section-title">🤖 Smart Weather Insights</h2>
+
+        <section class="insights-grid">
+            <div class="insight-card">
+                <h3>🧠 AI-Style Insights</h3>
+                <p id="insight">
+                    Search for a city to get weather recommendations.
+                </p>
+            </div>
+
+            <div class="insight-card">
+                <h3>🏃 Activity Planner</h3>
+                <p id="activity">
+                    Activity suggestions will appear here.
+                </p>
+            </div>
+
+            <div class="insight-card">
+                <h3>✈️ Travel Weather</h3>
+                <p>
+                    Search any destination using the search box above
+                    to check its weather before travelling.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Weather Finder © 2026 | Powered by Open-Meteo</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

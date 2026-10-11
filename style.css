@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 25px;
+}
+
+.app {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #7dd3fc;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.location-btn {
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #172b45;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.search-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.search-section h1 {
+    font-size: clamp(30px, 5vw, 45px);
+    margin-bottom: 12px;
+}
+
+.search-section > p {
+    color: #a8bad0;
+    margin-bottom: 20px;
+}
+
+#searchForm {
+    display: flex;
+    max-width: 550px;
+    margin: 25px auto;
+    gap: 10px;
+}
+
+#cityInput {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #2a4566;
+    outline: none;
+    background: #101e31;
+    color: white;
+    font-size: 16px;
+}
+
+#searchForm button {
+    padding: 15px 22px;
+    border-radius: 12px;
+    background: #38bdf8;
+    color: #07111f;
+}
+
+#status {
+    color: #7dd3fc;
+    font-size: 14px;
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #12345b, #145a80);
+    padding: 35px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 15px 40px #00000030;
+}
+
+#cityName {
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#currentDate {
+    color: #d1e5f7;
+    margin-bottom: 20px;
+}
+
+.weather-card h2 {
+    font-size: 65px;
+    margin-bottom: 8px;
+}
+
+.weather-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feels {
+    color: #d1e5f7;
+}
+
+.weather-icon {
+    font-size: 100px;
+}
+
+.section-title {
+    margin: 35px 0 18px;
+    font-size: 23px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.detail-card,
+.insight-card,
+.forecast-card {
+    background: #101e31;
+    border: 1px solid #1d344f;
+    padding: 22px;
+    border-radius: 18px;
+}
+
+.detail-card span {
+    color: #a8bad0;
+    font-size: 14px;
+}
+
+.detail-card h3 {
+    margin-top: 15px;
+    font-size: 23px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.forecast-card {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.forecast-card p {
+    color: #b9c9dc;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.forecast-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.forecast-card h3 {
+    margin: 8px 0;
+}
+
+.forecast-card small {
+    color: #a8bad0;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.insight-card h3 {
+    margin-bottom: 15px;
+    color: #7dd3fc;
+}
+
+.insight-card p {
+    color: #c1cede;
+    line-height: 1.7;
+}
+
+.muted {
+    color: #a8bad0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 45px;
+    padding: 20px;
+    color: #8296af;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) {
+    body {
+        padding: 15px;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-card {
+        padding: 25px;
+    }
+
+    .weather-card h2 {
+        font-size: 48px;
+    }
+
+    .weather-icon {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 400px) {
+    #searchForm {
+        flex-direction: column;
+    }
+
+    #searchForm button {
+        width: 100%;
+    }
+
+    .weather-icon {
+        font-size: 45px;
+    }
+}
